@@ -24,6 +24,18 @@ main {
     padding: var(--unit);
 }
 
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    article {
+        order: 1;
+    }
+    nav {
+        order: 2;
+    }
+}
+
 header {
     background-color: var(--black);
     color: white;

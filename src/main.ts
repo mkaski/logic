@@ -40,6 +40,9 @@ const initialFormula = params.get("f") ?? "";
 
 variablesTable.addEventListener("change", handleVariableChange);
 input.value = initialFormula;
+if (initialFormula) {
+	compile();
+}
 input.addEventListener("input", compile);
 
 function compile() {
