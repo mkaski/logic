@@ -1,0 +1,172 @@
+:root {
+    --unit: 20px;
+    --xs: calc(var(--unit) / 2);
+    --black: #1b2428;
+    --green: #4CAF50;
+    --red: #f44336;
+    --yellow: #ffa94d;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background: #f6f6ef;
+    font-family: monospace;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    align-items: start;
+    gap: var(--unit);
+    padding: var(--unit);
+}
+
+header {
+    background-color: var(--black);
+    color: white;
+    grid-column: span 4;
+    padding: 8px var(--unit);
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+nav {
+    display: grid;
+    gap: var(--unit);
+    grid-column: span 1;
+}
+
+h2 {
+    display: block;
+    color: white;
+    background-color: var(--black);
+    padding: var(--xs);
+    font-size: var(--unit);
+    margin: 0;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+form, aside, footer {
+    border: 2px solid var(--black);
+    border-radius: var(--xs);
+}
+
+aside[data-truth] {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+aside[data-variables] {
+    /* grid-column: span 1; */
+}
+
+article {
+    display: grid;
+    gap: var(--unit);
+}
+
+form article {
+    grid-template-columns: 7fr 3fr;
+    padding: var(--unit);
+}
+
+form textarea {
+    font-family: monospace;
+}
+
+form output {
+    font-weight: bold;
+    border: 2px solid var(--black);
+    border-radius: var(--xs);
+    padding: var(--xs);
+    background-color: white;
+    height: calc(var(--unit) * 3 + var(--xs));
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+form textarea {
+    padding: var(--xs);
+    border: 2px solid var(--black);
+    border-radius: var(--xs);
+    font-size: var(--unit);
+    resize: none;
+    height: calc(var(--unit) * 3 + var(--xs));
+}
+
+footer {
+    grid-column: span 1;
+}
+
+footer p {
+    margin: var(--unit);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: var(--unit);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid var(--black);
+    overflow: hidden;
+    font-family: monospace;
+}
+
+th, td {
+    border: 3px solid var(--black);
+    padding: 5px;
+    text-align: center;
+}
+
+td {
+    vertical-align: middle;
+    font-size: var(--unit);
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+input[type="checkbox"] {
+    /* height: var(--unit);
+    width: var(--unit); */
+}
+
+table input[type='text'] {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: var(--xs);
+    padding-right: 0;
+}
+
+.true {
+    color: var(--green);
+}
+
+.false {
+    color: var(--red);
+}
+
+.warning {
+    color: var(--yellow);
+}

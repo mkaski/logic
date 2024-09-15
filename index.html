@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💅 Propositional Logic Tool</title>
+</head>
+
+<body>
+  <header>
+    <h1>💅 Propositional Logic Tool</h1>
+  </header>
+  <main id="app">
+    <nav>
+      <aside data-variables>
+        <h2>Variables</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Variable</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows will be added dynamically -->
+          </tbody>
+        </table>
+      </aside>
+      <footer>
+        <h2>Operators</h2>
+        <ul>
+          <li><b>~</b> Negation (NOT)</li>
+          <li><b>v</b> Disjunction (OR)</li>
+          <li><b>&</b> Conjunction (AND)</li>
+          <li><b>-></b> Implication (IF)</li>
+          <li><b>&lt;-&gt;</b> Equivalence (EQUALS)</li>
+          <li><b>( )</b> Parentheses</li>
+        </ul>
+      </footer>
+      <footer>
+        <h2>About</h2>
+        <p>
+          Compile, evaluate, annotate and generate truth tables for propositional logic formulas.
+        </p>
+        <p>
+          Source code available on <a href="https://github.com/mkaski/logic">GitHub</a>.
+        </p>
+      </footer>
+    </nav>
+    <article>
+      <form onsubmit="return false">
+        <h2>Formula</h2>
+        <article>
+          <textarea name="formula" placeholder="For example... ~(p v q) <-> r"></textarea>
+          <output for="syntax">Type to compile...</output>
+        </article>
+      </form>
+      <aside data-truth>
+        <h2>Truth Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <!-- Column headers will be added dynamically -->
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows will be added dynamically -->
+          </tbody>
+        </table>
+      </aside>
+    </article>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
