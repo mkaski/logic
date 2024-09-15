@@ -3,7 +3,9 @@
     --xs: calc(var(--unit) / 2);
     --black: #1b2428;
     --green: #4CAF50;
+    --green-light: #b2f2bb;
     --red: #f44336;
+    --red-light: #f9c0c0;
     --yellow: #ffa94d;
 }
 
@@ -92,6 +94,19 @@ form output {
     align-items: center;
     justify-content: center;
     display: flex;
+    font-size: var(--unit);
+}
+
+form output.true {
+    background: var(--green-light);
+}
+
+form output.false {
+    background: var(--red-light);
+}
+
+form output.warning {
+    font-size: 12px;
 }
 
 form textarea {

@@ -89,6 +89,8 @@ function compile() {
 		window.history.replaceState({}, "", url.toString());
 	} catch (error) {
 		output.textContent = (error as Error).message;
+		output.classList.remove("true");
+		output.classList.remove("false");
 		output.classList.add("warning");
 	}
 }
