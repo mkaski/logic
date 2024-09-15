@@ -75,7 +75,7 @@ article {
 }
 
 form article {
-    grid-template-columns: 7fr 3fr;
+    grid-template-columns: 8fr 2fr;
     padding: var(--unit);
 }
 
