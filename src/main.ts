@@ -114,9 +114,9 @@ function renderVariables() {
 		checkbox.name = variable;
 		checkbox.checked = assignment;
 		valueCell.appendChild(checkbox);
-		valueCell.appendChild(
-			document.createTextNode(assignment ? "true" : "false"),
-		);
+		// valueCell.appendChild(
+		// 	document.createTextNode(assignment ? "true" : "false"),
+		// );
 
 		// Description input
 		const description =
